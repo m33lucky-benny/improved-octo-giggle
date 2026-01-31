@@ -1,0 +1,403 @@
+// _about.scss
+// About page styles - KieronPlay game credits platform
+// Purpose: Brand storytelling and feature showcase with gaming aesthetics
+
+// Import brand colors
+// Note: Ensure your main.scss imports colors before this file
+
+// Variables
+$about-max-width: 1000px;
+$about-spacing: 2.5rem;
+$about-spacing-mobile: 1.5rem;
+$feature-gap: 1.5rem;
+
+// Brand colors (use these in your implementation)
+$text-offwhite: #f5f5f5; // Off-white for primary text
+$text-muted: #888888; // Muted gray for secondary text
+$bg-dark: #0a0a0a; // Dark background
+$surface-dark-1: #1a1a1a; // Surface background
+$surface-dark-2: #2a2a2a; // Lighter surface
+$primary-neon: #ff10f0; // Neon pink primary
+$secondary-pink: #ff006e; // Hot pink secondary
+$accent-blue: #2563eb; // Blue accent
+$kieron-lime: #32cd32; // Lime green
+$border-color: #333333; // Border color
+
+$border-radius: 12px;
+$transition-speed: 0.3s;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+// About page wrapper
+.about-wrap {
+  max-width: $about-max-width;
+  margin: 0 auto;
+  padding: $about-spacing;
+  background-color: $bg-dark;
+  color: $text-offwhite;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $about-spacing-mobile;
+  }
+}
+
+// Hero section
+.about-hero {
+  text-align: center;
+  margin-bottom: $about-spacing * 1.5;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: $about-spacing-mobile * 1.5;
+  }
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $text-offwhite;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(255, 16, 240, 0.4); // Neon glow effect
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.75rem;
+  }
+}
+
+.about-intro {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: $text-muted; // Softer gray for intro
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1rem;
+  }
+}
+
+// Section styling
+.about-section {
+  margin-bottom: $about-spacing * 1.5;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-offwhite;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid $primary-neon; // Neon pink accent
+    padding-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(255, 16, 240, 0.3);
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 1.75rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: $text-muted; // Gray for body text
+    margin-bottom: 1rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  a {
+    color: $secondary-pink;
+    text-decoration: underline;
+    transition: color $transition-speed ease;
+
+    &:hover {
+      color: $primary-neon;
+    }
+  }
+}
+
+// Features grid (now used for values)
+.about-features,
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $feature-gap;
+  margin-top: 2rem;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-item,
+.value-item {
+  background: $surface-dark-1; // Dark surface
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  padding: 1.5rem;
+  transition: all $transition-speed ease;
+
+  &:hover {
+    border-color: $primary-neon; // Neon pink on hover
+    box-shadow: 0 4px 20px rgba(255, 16, 240, 0.2);
+    transform: translateY(-2px);
+    background: $surface-dark-2; // Lighter on hover
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $text-offwhite; // Off-white for headings
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.125rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-muted; // Muted for description
+    margin: 0;
+  }
+}
+
+// Fun fact callout box
+.fun-fact {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 16, 240, 0.1) 0%,
+    rgba(50, 205, 50, 0.1) 100%
+  );
+  border-left: 4px solid $primary-neon;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0 !important;
+  border-radius: 8px;
+  font-style: italic;
+  color: $text-offwhite !important;
+
+  strong {
+    color: $primary-neon;
+    font-style: normal;
+  }
+}
+
+// Game list
+.game-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+
+  li {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: $text-muted; // Muted for list items
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      content: "🎮";
+      position: absolute;
+      left: 0;
+      font-size: 1.25rem;
+    }
+
+    strong {
+      color: $text-offwhite; // Off-white for game names
+      font-weight: 600;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1rem;
+      padding-left: 2rem;
+    }
+  }
+}
+
+// CTA section
+.about-cta {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 16, 240, 0.15) 0%,
+    rgba(255, 0, 110, 0.1) 100%
+  );
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  padding: 3rem 2rem;
+  margin-top: $about-spacing * 2;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 2rem 1.5rem;
+    margin-top: $about-spacing;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $text-offwhite;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0;
+    text-shadow: 0 0 20px rgba(255, 16, 240, 0.4);
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: $text-muted;
+    margin-bottom: 2rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, $primary-neon 0%, $secondary-pink 100%);
+  color: $text-offwhite;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all $transition-speed ease;
+  box-shadow: 0 4px 20px rgba(255, 16, 240, 0.4);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(255, 16, 240, 0.6);
+    background: linear-gradient(
+      135deg,
+      lighten($primary-neon, 5%) 0%,
+      lighten($secondary-pink, 5%) 100%
+    );
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+  }
+}
+
+// Hidden SEO references section
+.seo-references {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+
+  // Additional hiding for maximum compatibility
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+// Screen reader only utility (for accessibility)
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Focus states for accessibility
+.about-wrap {
+  a:focus,
+  button:focus {
+    outline: 2px solid $primary-neon;
+    outline-offset: 2px;
+    box-shadow: 0 0 10px rgba(255, 16, 240, 0.5);
+  }
+}
+
+// Print styles
+@media print {
+  .about-wrap {
+    max-width: 100%;
+    padding: 0;
+    background-color: white;
+    color: black;
+  }
+
+  .about-heading {
+    font-size: 24pt;
+    color: black;
+    text-shadow: none;
+  }
+
+  .about-section {
+    h2 {
+      color: black;
+      text-shadow: none;
+      border-bottom-color: black;
+    }
+
+    p {
+      color: #333;
+    }
+  }
+
+  .feature-item {
+    background: white;
+    border-color: #ccc;
+
+    h3 {
+      color: black;
+    }
+
+    p {
+      color: #333;
+    }
+  }
+
+  .about-cta {
+    display: none;
+  }
+
+  .seo-references {
+    display: none !important;
+  }
+}

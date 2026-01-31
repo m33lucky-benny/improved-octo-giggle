@@ -1,12 +1,12 @@
 # =========================
 # 🌐 SITE METADATA
 # =========================
-title: ConsultantDev
-description: "SEO-first websites with strict CSP, performance optimization, and technical consulting for Singapore businesses."
+title: KieronPlay
+description: "Game Credits Top Up Asia"
 image: "/assets/images/ebiya-logo.webp"
 
-url: "https://consultant.ebiya.sg"   # REQUIRED
-baseurl: ""                          # Leave empty (not a sub-repo)
+url: "https://kieronplay.ebiya.sg" # REQUIRED
+baseurl: "" # Leave empty (not a sub-repo)
 
 markdown: kramdown
 
@@ -22,11 +22,11 @@ sass:
 # =========================
 business:
   name: "Ebiya.SG"
-  url: "https://consultant.ebiya.sg"
+  url: "https://kieronplay.ebiya.sg"
   image: "/assets/images/ebiya-logo.webp"
   telephone: "+65 8900 2228"
-  email: "bennyyuen@consultant.com"
-  priceRange: "$$$"
+  email: "kieronplay@gmail.com"
+  priceRange: "$$"
 
   address:
     streetAddress: "55 Changi Road #B1-01"
@@ -42,7 +42,7 @@ business:
     closes: "18:00"
 
   sameAs:
-    - "https://instagram.com/ebiyasg"
+    - "https://www.instagram.com/key.play.pay"
 
 # =========================
 # 🔌 PLUGINS (SAFE FOR GITHUB PAGES)
@@ -55,8 +55,8 @@ plugins:
 # 💬 WHATSAPP
 # =========================
 whatsapp:
-  enabled: true
-  phone: "6589002228"
+  enabled: false
+  phone: ""
 
 # =========================
 # 🚫 EXCLUDES

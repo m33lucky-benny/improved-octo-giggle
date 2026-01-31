@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "variables";
 @import "base";
 @import "layout";
@@ -12,4 +13,7 @@
 @import "footer";
 @import "services";
 @import "whatsapp";
-@import "contactus";
+// @import "contactus";
+@import "pages/home";
+@import "pages/contact";
+@import "pages/about";
